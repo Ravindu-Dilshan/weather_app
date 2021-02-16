@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "./components/input.comp";
 import Weather from "./components/weather.comp";
 import Error from "./components/error.comp";
@@ -14,6 +14,30 @@ const api = {
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
+  const [location, setlocation] = useState(false);
+
+  useEffect(() => {
+    if (!location) {
+      navigator.geolocation.getCurrentPosition(showPosition, showPositionError);
+      setlocation(true);
+    }
+  }, []);
+
+  const showPosition = (position) => {
+    fetch(
+      `${api.url}/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${api.key}`
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        console.log(result);
+      });
+  };
+
+  const showPositionError = (error) => {
+    console.log(error);
+    alert(error.message);
+  };
 
   const search = (event) => {
     if (event.key === "Enter") {
