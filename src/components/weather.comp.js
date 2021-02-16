@@ -1,27 +1,71 @@
 import React, { Component } from "react";
 
 class Weather extends Component {
+  constructor(props) {
+    super(props);
+    const rise = new Date(this.props.sunrise * 1e3);
+    const set = new Date(this.props.sunset * 1e3);
+
+    this.state = {
+      sunrise: rise.toLocaleTimeString(),
+      sunset: set.toLocaleTimeString(),
+    };
+  }
+
   render() {
     return (
-      <div className="m-3 text-white">
-        <div className="cards text-center mt-5">
-          <>
-            <h3 className="card-title">
+      <div className=" col-md-6 text-white">
+        <div className="card">
+          <span className="icon">{getWeatherIcon(this.props.icon)}</span>
+          <div className="display-4">
+            <p>
               {this.props.city}, {this.props.country}
-            </h3>
-            <h4 className="card-text">Tempreature</h4>
-            <p className="card-text"></p>
-            <h5 className="card-text">
-              {this.props.temp_min} °C to {this.props.temp_max} °C
-            </h5>
-            <h5 className="card-text">
-              {this.props.type} ({this.props.desc})
-            </h5>
-          </>
+            </p>
+          </div>
+          <div>
+            {this.props.type} ({this.props.desc})
+          </div>
+          <div className="flex-grow-1">
+            <p className="my-1">
+              <img src="https://img.icons8.com/windows/32/ffffff/temperature-low.png" />
+              <span>
+               &nbsp;{this.props.temp_min}&nbsp;°C&nbsp;&ensp;to&nbsp;&ensp;{this.props.temp_max}&nbsp;°C
+              </span>
+            </p>
+          </div>
+          <div className="row">
+            <div className="col-6">
+              <img src="https://img.icons8.com/metro/26/ffffff/sunrise.png" />
+              <span>&ensp;{this.state.sunrise}</span>
+            </div>
+            <div className="col-6">
+              <img src="https://img.icons8.com/metro/26/ffffff/sunset.png" />
+              <span>&ensp;{this.state.sunset}</span>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 }
-
 export default Weather;
+
+function getWeatherIcon(id) {
+  if (id >= 200 && id <= 232) {
+    return <img src="https://img.icons8.com/office/100/000000/cloud-lighting--v1.png" />
+  } else if (id >= 300 && id <= 321) {
+    return <img src="https://img.icons8.com/office/100/000000/keep-dry.png" />;
+  } else if (id >= 500 && id <= 531) {
+    return <img src="https://img.icons8.com/office/100/000000/rain.png" />;
+  } else if (id >= 600 && id <= 622) {
+    return <img src="https://img.icons8.com/office/100/000000/snow.png" />;
+  } else if (id >= 701 && id <= 781) {
+    return <img src="https://img.icons8.com/office/100/000000/wind--v1.png" />;
+  } else if (id >= 801 && id <= 804) {
+    return <img src="https://img.icons8.com/office/100/000000/fog-day--v1.png" />
+  } else if (id == 800) {
+    return <img src="https://img.icons8.com/office/100/000000/sun--v1.png" />;
+  } else {
+    return <p className="card-text">ERROR</p>;
+  }
+}

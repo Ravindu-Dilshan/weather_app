@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Input extends Component {
   render() {
     return (
-      <div className="m-5">
+      <div className="pt-4 mx-md-5 form col-md-6">
         <input
           type="text"
           className="form-control"

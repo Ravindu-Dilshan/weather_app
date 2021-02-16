@@ -5,7 +5,6 @@ import Input from "./components/input.comp";
 import Weather from "./components/weather.comp";
 import Error from "./components/error.comp";
 import "./assets/weather.css";
-import logo from "./assets/icons/a.png";
 
 const api = {
   key: "5ae2fa59d57c156a946c3cd6ab22946e",
@@ -29,66 +28,52 @@ function App() {
   };
 
   return (
-    <div className="App hot">
-      <div>
-        <Input query={query} search={search} setQuery={setQuery} />
-        {typeof weather.message != "undefined" ? (
-          <Error message={weather.message} />
-        ) : (
-          ""
-        )}
-        {typeof weather.main != "undefined" ? (
-          <Weather
-            city={weather.name}
-            country={weather.sys.country}
-            temp_min={weather.main.temp_min}
-            temp_max={weather.main.temp_max}
-            desc={weather.weather[0].description}
-            type={weather.weather[0].main}
-          />
-        ) : (
-          ""
-        )}
-      </div>
+    <div
+      className={
+        typeof weather.main != "undefined"
+          ? getWeatherIcon(weather.weather[0].id)
+          : "App rain"
+      }
+    >
+      <main>
+        <div>
+          <Input query={query} search={search} setQuery={setQuery} />
+          {typeof weather.message != "undefined" ? (
+            <Error message={weather.message} />
+          ) : (
+            ""
+          )}
+          {typeof weather.main != "undefined" ? (
+            <Weather
+              city={weather.name}
+              country={weather.sys.country}
+              temp_min={weather.main.temp_min}
+              temp_max={weather.main.temp_max}
+              desc={weather.weather[0].description}
+              type={weather.weather[0].main}
+              sunrise={weather.sys.sunrise}
+              sunset={weather.sys.sunset}
+              icon={weather.weather[0].id}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+      </main>
     </div>
   );
 }
 
 export default App;
 
-/*<div className="m-3">
-  <input
-    type="text"
-    className="form-control"
-    placeholder="New York"
-    onChange={(e) => setQuery(e.target.value)}
-    value={query}
-    onKeyPress={search}
-  ></input>
-  <div className="card text-center mt-5">
-    <div className="card-body">
-      {typeof weather.main != "undefined" ? (
-        <>
-          <h3 className="card-title">
-            {weather.name}, {weather.sys.country}
-          </h3>
-          <h4 className="card-text">Tempreature</h4>
-          <p className="card-text"></p>
-          <h5 className="card-text">
-            {weather.main.temp_min} °C to {weather.main.temp_max} °C
-          </h5>
-          <h5 className="card-text">
-            {weather.weather[0].main} ({weather.weather[0].description})
-          </h5>
-        </>
-      ) : (
-        <>
-          <h3 className="card-title"></h3>
-          <h4 className="card-text">Tempreature</h4>
-          <p className="card-text"></p>
-          <h5 className="card-text"> °C</h5>
-        </>
-      )}
-    </div>
-  </div>
-</div>;*/
+function getWeatherIcon(id) {
+  if (id >= 200 && id <= 531) {
+    return "App rain";
+  } else if (id >= 600 && id <= 622) {
+    return "App snow";
+  } else if (id == 800) {
+    return "App sun";
+  } else if (id >= 701 && id <= 804) {
+    return "App cloud";
+  }
+}

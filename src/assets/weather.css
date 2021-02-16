@@ -1,0 +1,43 @@
+.card {
+  padding: 1rem;
+  margin: 1.5rem 4vw;
+  border-radius: 1rem;
+  background-color: rgba(170, 154, 154, 0.22);
+  border-color: rgba(217, 217, 217, 0.22);
+  text-align: center;
+}
+
+.icon {
+  align-self: flex-end;
+  margin-right: -2.5rem;
+  margin-top: -2rem;
+  z-index: 999;
+}
+
+.icon img {
+  width: 5rem;
+}
+
+.form input {
+  background-color: rgba(104, 97, 97, 0.22);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  color: rgb(243, 243, 243);
+  font-size: small;
+}
+
+.form input::placeholder {
+    color: rgb(243, 243, 243); 
+  }
+
+.form input:focus {
+  background-color: rgb(104, 97, 97, 0.22);
+  box-shadow: none !important;
+  color: rgb(243, 243, 243);
+}
+
+.alert{
+    background-color: rgb(104, 97, 97, 0.22);
+    color: rgb(243, 243, 243);
+}

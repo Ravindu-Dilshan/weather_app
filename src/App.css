@@ -1,17 +1,17 @@
-.hot {
-  background-image: linear-gradient(rgb(221, 33, 33), rgb(255, 181, 43));
-  background-size: cover;
-  background-repeat: no-repeat;
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+.cloud {
+  background-image: url("assets/clouds.webp");
 }
-.cold {
-  background-image: linear-gradient(rgb(11, 11, 109), rgb(119, 157, 226));
-  background-size: cover;
-  background-repeat: no-repeat;
+.rain {
+  background-image: url("assets/rain.webp");
+  
 }
-.rainy {
-  background-image: linear-gradient(black, gray);
-  background-size: cover;
-  background-repeat: no-repeat;
+.snow {
+  background-image: url("assets/snow.webp");
+}
+.sun {
+  background-image: url("assets/sun.webp");
 }
 
 .App {
@@ -20,6 +20,15 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  /*background-image: linear-gradient(to bottom, rgb(92, 43, 43,.5),rgb(143, 101, 101,.2));*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-icon {
+  max-width: 80%;
+  height: auto;
+}
+.card-font{
+  font-family: 'Marcellus', serif
 }
 
