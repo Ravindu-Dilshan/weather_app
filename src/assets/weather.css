@@ -4,8 +4,9 @@ body {
 }
 
 .card {
+  width: 9;
   padding: 1rem;
-  margin: 1rem 0vw;
+  margin: 1rem;
   border-radius: 1rem;
   background-color: rgba(170, 154, 154, 0.22);
   border-color: rgba(217, 217, 217, 0.22);
@@ -21,7 +22,7 @@ body {
 
 .icon {
   align-self: flex-end;
-  margin-right: -2.5rem;
+  margin-right: -1.4rem;
   margin-top: -2rem;
   z-index: 999;
 }
@@ -55,7 +56,7 @@ body {
 }
 
 .weather-name{
-  font-size: 40px;
+  font-size: 35px;
 }
 
 table td{
@@ -65,5 +66,8 @@ table td{
 @media screen and (min-device-width: 850px) {
   .weather-card{
     width:50%;
+  }
+  .weather-name{
+    font-size: 45px;
   }
 }
