@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Input extends Component {
   render() {
     return (
-      <div className="pt-4 m-auto form col-md-5">
+      <div className="pt-1 m-auto form col-md-5">
         <input
           type="text"
           className="form-control"
