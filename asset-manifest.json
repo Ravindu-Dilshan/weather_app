@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Ravindu-Dilshan/weather_app/static/css/main.e4a401aa.chunk.css",
+    "main.js": "/Ravindu-Dilshan/weather_app/static/js/main.fc414bc8.chunk.js",
+    "main.js.map": "/Ravindu-Dilshan/weather_app/static/js/main.fc414bc8.chunk.js.map",
+    "runtime-main.js": "/Ravindu-Dilshan/weather_app/static/js/runtime-main.140da311.js",
+    "runtime-main.js.map": "/Ravindu-Dilshan/weather_app/static/js/runtime-main.140da311.js.map",
+    "static/css/2.150d169a.chunk.css": "/Ravindu-Dilshan/weather_app/static/css/2.150d169a.chunk.css",
+    "static/js/2.1da3597b.chunk.js": "/Ravindu-Dilshan/weather_app/static/js/2.1da3597b.chunk.js",
+    "static/js/2.1da3597b.chunk.js.map": "/Ravindu-Dilshan/weather_app/static/js/2.1da3597b.chunk.js.map",
+    "static/js/3.eda76e4f.chunk.js": "/Ravindu-Dilshan/weather_app/static/js/3.eda76e4f.chunk.js",
+    "static/js/3.eda76e4f.chunk.js.map": "/Ravindu-Dilshan/weather_app/static/js/3.eda76e4f.chunk.js.map",
+    "index.html": "/Ravindu-Dilshan/weather_app/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/Ravindu-Dilshan/weather_app/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.e4a401aa.chunk.css.map": "/Ravindu-Dilshan/weather_app/static/css/main.e4a401aa.chunk.css.map",
+    "static/js/2.1da3597b.chunk.js.LICENSE.txt": "/Ravindu-Dilshan/weather_app/static/js/2.1da3597b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Ravindu-Dilshan/weather_app/static/media/sun.ea887b1f.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.140da311.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.1da3597b.chunk.js",
+    "static/css/main.e4a401aa.chunk.css",
+    "static/js/main.fc414bc8.chunk.js"
+  ]
+}
