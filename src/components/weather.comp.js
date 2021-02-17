@@ -16,7 +16,7 @@ class Weather extends Component {
 
   render() {
     return (
-      <div className="col-12 text-white px-4">
+      <div className="col-12 text-white px-2">
         <div className="card mx-auto weather-card">
           <span className="icon">{getWeatherIcon(this.props.icon)}</span>
           <div className="weather-name">

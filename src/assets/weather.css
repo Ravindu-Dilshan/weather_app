@@ -5,7 +5,7 @@ body {
 
 .card {
   padding: 1rem;
-  margin: 1.5rem 4vw;
+  margin: 1rem 0vw;
   border-radius: 1rem;
   background-color: rgba(170, 154, 154, 0.22);
   border-color: rgba(217, 217, 217, 0.22);
