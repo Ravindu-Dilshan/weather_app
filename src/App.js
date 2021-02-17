@@ -71,13 +71,17 @@ function App() {
             <Weather
               city={weather.name}
               country={weather.sys.country}
-              temp_min={weather.main.temp_min}
-              temp_max={weather.main.temp_max}
+              temp={weather.main.temp}
+              humid={weather.main.humidity}
+              wind={weather.wind.speed}
+              pressure={weather.main.pressure}
+              cloud={weather.clouds.all}
               desc={weather.weather[0].description}
               type={weather.weather[0].main}
               sunrise={weather.sys.sunrise}
               sunset={weather.sys.sunset}
               icon={weather.weather[0].id}
+              time={weather.dt}
             />
           ) : (
             ""

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+body {
+  font-family: 'Marcellus';
+}
+
 .card {
   padding: 1rem;
   margin: 1.5rem 4vw;
@@ -5,6 +10,13 @@
   background-color: rgba(170, 154, 154, 0.22);
   border-color: rgba(217, 217, 217, 0.22);
   text-align: center;
+}
+
+.date {
+  align-self: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -2rem;
+  z-index: 999;
 }
 
 .icon {
@@ -40,4 +52,18 @@
 .alert{
     background-color: rgb(104, 97, 97, 0.22);
     color: rgb(243, 243, 243);
+}
+
+.weather-name{
+  font-size: 40px;
+}
+
+table td{
+  padding-top: 5px;
+}
+
+@media screen and (min-device-width: 850px) {
+  .weather-card{
+    width:50%;
+  }
 }
