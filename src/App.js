@@ -7,7 +7,7 @@ import Error from "./components/error.comp";
 import "./assets/weather.css";
 
 const api = {
-  key: "5ae2fa59d57c156a946c3cd6ab22946e",
+  key: "####################################",
   url: "https://api.openweathermap.org/data/2.5/",
 };
 
